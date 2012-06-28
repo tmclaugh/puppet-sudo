@@ -30,11 +30,6 @@
 #     Only set this, if your platform is not supported or you know, what you're doing.
 #     Default: auto-set, platform specific
 #
-#   [*source*]
-#     Alternate source file location
-#     Only set this, if your platform is not supported or you know, what you're doing.
-#     Default: auto-set, platform specific
-#
 # Actions:
 #   Installs locales package and generates specified locales
 #
@@ -54,7 +49,6 @@ class sudo(
   $config_file = $sudo::params::config_file,
   $config_file_replace = true,
   $config_dir = $sudo::params::config_dir,
-  $source = $sudo::params::source
 
 ) inherits sudo::params {
 
@@ -86,7 +80,6 @@ class sudo(
     group   => 'root',
     mode    => '0440',
     replace => $config_file_replace,
-    source  => $source,
     require => Package[$package],
   }
   
