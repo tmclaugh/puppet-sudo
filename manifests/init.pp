@@ -3,7 +3,7 @@
 # This module manages sudo
 #
 # Actions:
-#   Installs locales package and generates specified locales
+#   Installs sudo
 #
 # Requires:
 #   Nothing
